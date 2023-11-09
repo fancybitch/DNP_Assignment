@@ -1,0 +1,152 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "Username": "string",
+      "Password": null,
+      "Email": null,
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 2,
+      "Username": "ola",
+      "Password": null,
+      "Email": null,
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 3,
+      "Username": "xcvbnm",
+      "Password": "Asdfgh12345",
+      "Email": "ghjk@vbnm",
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 4,
+      "Username": "Ola1234",
+      "Password": "Krz098754jkk",
+      "Email": "olcia@gmail.com",
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 5,
+      "Username": "Aleksandra123",
+      "Password": "1q2w3e4R",
+      "Email": "ola@via.dk",
+      "Domain": null,
+      "Name": null,
+      "Role": null,
+      "Age": 0,
+      "SecurityLevel": 0
+    },
+    {
+      "Id": 6,
+      "Username": "MikkelWJ",
+      "Password": "MikkelWJ123",
+      "Email": "Mikkel@via.dk",
+      "Domain": null,
+      "Name": null,
+      "Role": "User",
+      "Age": 0,
+      "SecurityLevel": 0
+    }
+  ],
+  "Posts": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 1,
+        "Username": "string",
+        "Password": null,
+        "Email": null,
+        "Domain": null,
+        "Name": null,
+        "Role": null,
+        "Age": 0,
+        "SecurityLevel": 0
+      },
+      "Title": "Why me",
+      "Content": "Content of the post"
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Id": 1,
+        "Username": "string",
+        "Password": null,
+        "Email": null,
+        "Domain": null,
+        "Name": null,
+        "Role": null,
+        "Age": 0,
+        "SecurityLevel": 0
+      },
+      "Title": "Why me",
+      "Content": "123"
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 1,
+        "Username": "string",
+        "Password": null,
+        "Email": null,
+        "Domain": null,
+        "Name": null,
+        "Role": null,
+        "Age": 0,
+        "SecurityLevel": 0
+      },
+      "Title": "How to be rich?",
+      "Content": "Have money"
+    },
+    {
+      "Id": 4,
+      "Owner": {
+        "Id": 2,
+        "Username": "ola",
+        "Password": null,
+        "Email": null,
+        "Domain": null,
+        "Name": null,
+        "Role": null,
+        "Age": 0,
+        "SecurityLevel": 0
+      },
+      "Title": "Psychology of money",
+      "Content": "Have money once again"
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Id": 2,
+        "Username": "ola",
+        "Password": null,
+        "Email": null,
+        "Domain": null,
+        "Name": null,
+        "Role": null,
+        "Age": 0,
+        "SecurityLevel": 0
+      },
+      "Title": "Ale ale ale ksandra",
+      "Content": "Ale ale ale ladna"
+    }
+  ]
+}

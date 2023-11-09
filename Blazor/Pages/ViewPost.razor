@@ -1,0 +1,44 @@
+@page "/ViewPost/{id:int}"
+@using Domain.DTOs
+@using Domain.Models
+@using HttpClients.ClientInterfaces
+@inject IUserService userService;
+@inject IPostService postService;
+<h3>Post details</h3>
+
+@if (post != null)
+{
+    <p><strong>Title:</strong> @post.Title</p>
+    <p><strong>Content:</strong> @post.Content</p>
+}
+else
+{
+    <p>Post not found.</p>
+}
+
+@code {
+    private PostBasicDto post = null!;
+    
+    [Parameter]
+    public int Id { get; set; }
+
+    
+    private string msg = "";
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            post = await postService.GetByIdAsync( Id, null, null);
+            
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+}

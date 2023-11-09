@@ -1,0 +1,25 @@
+/* post-details.css */
+
+.post-details {
+    max-width: 600px;
+    margin: auto;
+}
+
+.post-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-details p {
+    margin-bottom: 15px;
+}
+
+.post-details strong {
+    font-weight: bold;
+}
+
+.post-details .username {
+    font-size: 14px;
+    color: #888; /* Light gray color for the username */
+}

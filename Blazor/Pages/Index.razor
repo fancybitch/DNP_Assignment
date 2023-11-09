@@ -1,0 +1,75 @@
+﻿@page "/"
+@using HttpClients.ClientInterfaces
+@using Domain.Models
+@inject IPostService postService;
+@inject NavigationManager navMng;
+
+<PageTitle>Homepage</PageTitle>
+
+<h1>Posts overview</h1>
+
+Here you can see all posts
+
+<div>
+    <button class="loadbtn" @onclick="LoadPosts">Load</button>
+</div>
+
+@if (posts == null)
+{
+}
+else if (!posts.Any())
+{
+    <p>No Posts to display</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            
+            <th>User</th>
+            <th>Title</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in posts)
+        {
+            <tr @onclick=" () => NavigateToViewPost(item.Id)">
+                
+                <td>@item.Owner.Username</td>
+                <td>@item.Title</td>
+                
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+@if (!string.IsNullOrEmpty(msg))
+{
+    <label style="color: red">@msg</label>
+}
+
+@code {
+    private IEnumerable<Post>? posts;
+    private string msg = "";
+
+    private async Task LoadPosts()
+    {
+        try
+        {
+            posts = await postService.GetAsync( null, null, null);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    private void NavigateToViewPost(int postId)
+    {
+    // Use NavigationManager to navigate to the PostDetails page with the postId parameter
+        navMng.NavigateTo($"/ViewPost/{postId}");
+    }
+}
+
